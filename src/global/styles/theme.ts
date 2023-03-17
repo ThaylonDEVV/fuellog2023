@@ -1,17 +1,17 @@
 export default {
   colors: {
-    primary: '#0B420C',
+    primary: '#0500FF',
     primary_light: '#12A454',
     secondary: '#C8191E',
-    background: '#E5E5E5',
+    background: '#0085FF',
     
     header_text: '#FFFFFF',
-    text: '#000000',
+    text: '#363F5F',
     text_light: '#969CB2',
-    
-    highlight: '##FF872C',
-    card_background: '#363F5F',
+    car_plate: '#FFFFFF', // nova chave com a cor desejada
 
+    highlight: '#FF872C',
+    card_background: '#363F5F',
   },
   fonts: {
     regular: 'Poppins_400Regular',

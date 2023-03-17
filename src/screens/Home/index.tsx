@@ -8,22 +8,22 @@ import {
   Greeting,
   CarPlate,
   LogoutButton,
-  LogoutIcon 
+  LogoutIcon, 
+  Logo
 } from './styles';
-
+import logo from './logo.png' ;
 export function Home() {
   return (
     <Container>
       <Header>
         <UserWrapper>
           <CarInfo>
-            <CarIcon name='directions-car'>
 
-            </CarIcon>
             <HeaderTextWrapper>
-              <Greeting>
-                Placa
+              <Greeting >
+                BEM-VINDO 
               </Greeting>
+              <Logo source={logo} />
               <CarPlate>
                 AAA-9999
               </CarPlate>
