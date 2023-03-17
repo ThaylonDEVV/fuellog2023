@@ -57,6 +57,15 @@ export const CarPlate = styled.Text`
   left : ${RFValue(52)}px;
   text-align: center; // Centraliza o texto horizontalmente
 `;
+export const SmallText = styled.Text`
+  color: ${({ theme }) => theme.colors.text_light};
+  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${RFValue(10)}px;
+  line-height: ${RFValue(10)}px;
+  left: ${RFValue(50)}px;
+  text-align: center;
+`;
+
 
 export const LogoutButton = styled.View``;
 

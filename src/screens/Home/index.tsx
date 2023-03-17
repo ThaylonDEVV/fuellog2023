@@ -3,15 +3,16 @@ import {
   Header,
   UserWrapper,
   CarInfo,
-  CarIcon,
   HeaderTextWrapper,
   Greeting,
   CarPlate,
   LogoutButton,
   LogoutIcon, 
-  Logo
+  Logo,
+  SmallText
 } from './styles';
 import logo from './logo.png' ;
+import React from 'react';
 export function Home() {
   return (
     <Container>
@@ -21,12 +22,14 @@ export function Home() {
 
             <HeaderTextWrapper>
               <Greeting >
-                BEM-VINDO 
+                BEM-VINDO
               </Greeting>
-              <Logo source={logo} />
-              <CarPlate>
-                AAA-9999
-              </CarPlate>
+              <SmallText>Informações sobre o veículo:</SmallText>
+                <Logo source={logo} />
+                <CarPlate>
+                  AAA-9999
+  
+                </CarPlate>
             </HeaderTextWrapper>
           </CarInfo>
           <LogoutButton>
