@@ -1,45 +1,27 @@
 import { 
   Container,
   Header,
-  ValueContainer,
   ValueLabel,
   Value,
   Type,
   AmountContainer,
-  Amount,
-  Footer,
-  KmContainer,
   Date,
 } from "./styles";
-
+import React from 'react';
 export function TransactionCard() {
   return (
     <Container>
       <Header>
-        <ValueContainer>
-          <ValueLabel>Valor: </ValueLabel>
+        <Type>Gasolina - 4,5 Litros</Type>
+        <ValueLabel> Valor: </ValueLabel>
           <Value>R$ 151,24</Value>
-        </ValueContainer>
-        <Type>Álcool</Type>
       </Header>
-
       <AmountContainer>
-        <ValueLabel>Preço do litro: </ValueLabel>
-        <Amount>R$ 3,98</Amount>
+        <Date>06.10.2023 10:30 AM---- Valor L/ R$ 5,22 </Date>
       </AmountContainer>
 
-      <AmountContainer>
-        <ValueLabel>Qtd de litros: </ValueLabel>
-        <Amount>38</Amount>
-      </AmountContainer>
 
-      <Footer>
-        <KmContainer>
-          <ValueLabel>Km percorrida: </ValueLabel>
-          <Amount>340</Amount>
-        </KmContainer>
-        <Date>13/04/2022</Date>
-      </Footer>
+      
       
     </Container>
   )

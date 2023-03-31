@@ -6,7 +6,7 @@ export const Container = styled.View`
   border-radius: 5px;
 
   padding: 10px 22px;
-  margin-top: ${RFValue(18)}px;
+  margin-top: ${RFValue(10)}px;
 `;
 
 export const Header = styled.View`
@@ -15,10 +15,6 @@ export const Header = styled.View`
   justify-content: space-between;
 `;
 
-export const ValueContainer = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
 
 export const ValueLabel = styled.Text`
   color: ${({ theme }) => theme.colors.card_title};
@@ -30,7 +26,7 @@ export const ValueLabel = styled.Text`
 export const Value = styled.Text`
   color: ${({ theme }) => theme.colors.primary_light};
   font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${RFValue(16)}px;
+  font-size: ${RFValue(14)}px;
 `;
 
 export const Type = styled.Text`
@@ -42,30 +38,16 @@ export const Type = styled.Text`
 export const AmountContainer = styled.View`
   flex-direction: row;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 2px;
 `;
 
-export const Amount = styled.Text`
-  color: ${({ theme }) => theme.colors.text};
-  font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${RFValue(14)}px;
-`;
-
-export const Footer = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0 10px 0;
-`;
-
-export const KmContainer = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
 
 export const Date = styled.Text`
   color: ${({ theme }) => theme.colors.text_light};
   font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${RFValue(14)}px;
+  font-size: ${RFValue(12)}px;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  margin-bottom: ${RFValue(10)}px;
 `;
 

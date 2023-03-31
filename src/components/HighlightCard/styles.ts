@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/native';
-import { MaterialIcons } from '@expo/vector-icons';
+
 import { RFValue } from 'react-native-responsive-fontsize';
 
 interface TypeProps {
@@ -8,11 +8,13 @@ interface TypeProps {
 
 export const Container = styled.View<TypeProps>`
   background-color: ${({ theme, type }) => 
-    type === 'total' ? theme.colors.card_title : theme.colors.header_text};
+    type === 'total' ? theme.colors.card_title : theme.colors.text_back};
 
   width: ${RFValue(300)}px;
   padding: 19px 23px;
-  padding-bottom: ${RFValue(42)}px;
+  padding-bottom: ${RFValue(8)}px;
+  border-radius: ${RFValue(30)}px;
+  border: 2px solid black;
   margin-right: 16px;
 `;
 
@@ -24,26 +26,11 @@ export const Header = styled.View`
 
 export const Title = styled.Text<TypeProps>`
   color: ${({ theme, type }) => 
-    type === 'total' ? theme.colors.header_text : theme.colors.card_title};
+    type === 'total' ? theme.colors.text_back : theme.colors.card_title};
   font-family: ${({ theme }) => theme.fonts.bold};
-  font-size: ${RFValue(16)}px;
+  font-size: ${RFValue(20)}px;
 `;
 
-export const Icon = styled(MaterialIcons)<TypeProps>`
-  font-size: ${RFValue(45)}px;
-
-  ${(props) => props.type === 'alcohol' && css`
-    color: ${({ theme }) => theme.colors.primary_light};
-  `}
-
-  ${(props) => props.type === 'gasoline' && css`
-    color: ${({ theme }) => theme.colors.secondary};
-  `}
-
-  ${(props) => props.type === 'total' && css`
-    color: ${({ theme }) => theme.colors.header_text};
-  `}
-`;
 
 export const Consumption = styled.View`
   flex-direction: row;
@@ -83,13 +70,4 @@ export const CostValue = styled.Text<TypeProps>`
     type === 'total' ? theme.colors.header_text : theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.semi_bold};
   font-size: ${RFValue(16)}px;
-`;
-
-export const Footer = styled.View``;
-
-export const LastTransaction = styled.Text<TypeProps>`
-  color: ${({ theme, type }) => 
-    type === 'total' ? theme.colors.header_text : theme.colors.text_light};
-  font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${RFValue(12)}px;
 `;

@@ -1,11 +1,12 @@
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionCard } from '../../components/TransactionCard';
+import React from 'react';
 import { 
   Container,
   Header,
   UserWrapper,
   CarInfo,
-  CarIcon,
+  
   HeaderTextWrapper,
   Greeting,
   CarPlate,
@@ -13,8 +14,11 @@ import {
   LogoutIcon,
   HighlightCards,
   Transactions,
-  Title 
+  Title,
+  Logo,
+  SmallText
 } from './styles';
+import logo from './logo.png' ;
 
 export function Home() {
   return (
@@ -22,13 +26,13 @@ export function Home() {
       <Header>
         <UserWrapper>
           <CarInfo>
-            <CarIcon name='directions-car'>
-
-            </CarIcon>
             <HeaderTextWrapper>
               <Greeting>
-                Placa
+                BEM-VINDO
               </Greeting>
+              <SmallText>Informações sobre o veículo:</SmallText>
+              <Logo source={logo} />
+
               <CarPlate>
                 AAA-9999
               </CarPlate>
@@ -44,24 +48,22 @@ export function Home() {
 
       <HighlightCards>
         <HighlightCard 
-          title='Álcool'
-          consumption='7,00 km/l'
-          cost='R$ 0,34 / km'
-          lastTransaction='Última entrada dia 13 de abril'
-          type='alcohol'
-        />
-        <HighlightCard 
           title='Gasolina'
-          consumption='8,63 km/l'
-          cost='R$ 0,28 / km'
-          lastTransaction='Última entrada dia 03 de abril'
+          consumption='120 Litros'
+          cost='R$ 5,23 / Litro'
           type='gasoline'
         />
         <HighlightCard 
+          title='Álcool'
+          consumption='80 Litros'
+          cost='R$ 4,15 / Litro'
+          
+          type='alcohol'
+        />
+        <HighlightCard 
           title='Geral'
-          consumption='7,82 km/l'
-          cost='R$ 0,31 / km'
-          lastTransaction='01 a 16 de abril'
+          consumption='100 Litros'
+          cost='R$ 4,39 / Litro'
           type='total'
         />
       </HighlightCards>
@@ -70,6 +72,9 @@ export function Home() {
         <Title>Abastecimentos</Title>
 
         <TransactionCard />
+        <TransactionCard />
+        <TransactionCard />
+        
       </Transactions>
     </Container>
   );
