@@ -6,7 +6,6 @@ import {
   Header,
   UserWrapper,
   CarInfo,
-  
   HeaderTextWrapper,
   Greeting,
   CarPlate,
@@ -57,8 +56,7 @@ export function Home() {
           title='Álcool'
           consumption='80 Litros'
           cost='R$ 4,15 / Litro'
-          
-          type='alcohol'
+           type='alcohol'
         />
         <HighlightCard 
           title='Geral'

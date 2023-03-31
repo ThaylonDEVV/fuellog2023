@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Container,
   Header,
@@ -14,7 +15,6 @@ interface Props {
   title: string;
   consumption: string;
   cost: string;
-  lastTransaction: string;
   type: 'gasoline' | 'alcohol' | 'total';
 }
 
